@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="video"
+            type="com.learnings.github.demo.data.model.Video"/>
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.google.android.youtube.player.YouTubeThumbnailView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bg_default"
+                android:transitionName="imageMain"
+                app:imageUrl="@{video.videoId}"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha=".8"
+                android:tint="@color/white"
+                android:src="@drawable/ic_play"/>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:minHeight="56dp"
+                android:background="@drawable/bg_gradient_black"
+                android:layout_gravity="bottom"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@{video.snippet.title}"
+                android:textSize="16dp"
+                android:textAppearance="?android:attr/textAppearanceListItem" />
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+</layout>
