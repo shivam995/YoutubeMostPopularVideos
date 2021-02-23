@@ -18,7 +18,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         dataBinding.enabled = true
         buildConfigField "String", "BASE_URL", "\"https://youtube.googleapis.com/youtube/\""
-        buildConfigField "String", "API_KEY", "\"AIzaSyCkCTZv6FgRUyd2FlNMloW92qbm9L9eJf8\""
+        buildConfigField "String", "API_KEY", "\"YOUR_API_KEY\""
     }
 
     buildTypes {
