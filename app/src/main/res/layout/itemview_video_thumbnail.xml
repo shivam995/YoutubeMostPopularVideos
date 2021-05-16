@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:alpha=".8"
-                android:tint="@color/white"
+                app:tint="@color/white"
                 android:src="@drawable/ic_play"/>
 
             <TextView
